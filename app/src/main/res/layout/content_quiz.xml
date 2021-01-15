@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".QuizActivity"
+    tools:showIn="@layout/activity_quiz">
+
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <Button
+           android:layout_marginTop="10dp"
+           android:id="@+id/btn_nxt"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/count_quest"
+           android:layout_marginStart="15dp"
+           android:layout_marginEnd="15dp"
+           android:layout_marginBottom="15dp"
+           android:background="@drawable/next_btn"
+           android:fontFamily="monospace"
+           android:padding="10dp"
+           android:text="Next"
+           android:textColor="@color/textcolor"
+           android:textSize="16sp" />
+
+       <TextView
+           android:visibility="gone"
+           android:textColor="@color/colorbackground"
+           android:id="@+id/timer"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:fontFamily="monospace"
+           android:padding="10dp"
+           android:text="00:30"
+           android:textSize="34sp" />
+
+
+       <TextView
+           android:id="@+id/share_question"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/quid_view"
+           android:layout_alignParentStart="true"
+           android:layout_marginStart="15dp"
+           android:layout_marginTop="5dp"
+           android:layout_marginEnd="15dp"
+           android:layout_marginBottom="15dp"
+           android:fontFamily="monospace"
+           android:padding="10dp"
+           android:textColor="@color/colorbackground"
+           android:textSize="12sp" />
+       <TextView
+           android:id="@+id/count_quest"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/quid_view"
+           android:layout_alignParentRight="true"
+           android:layout_marginStart="15dp"
+           android:layout_marginTop="5dp"
+           android:layout_marginEnd="15dp"
+           android:layout_marginBottom="15dp"
+           android:fontFamily="monospace"
+           android:padding="10dp"
+           android:textColor="@color/colorbackground"
+           android:textSize="16sp" />
+
+       <android.support.v7.widget.CardView
+           android:id="@+id/quid_view"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/timer"
+           android:layout_margin="10dp"
+           android:elevation="3dp"
+           app:cardCornerRadius="5dp">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:padding="20dp">
+
+               <TextView
+                   android:id="@+id/qst_txt"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/armata"
+                   android:textColor="@color/colorbackground"
+                   android:textSize="20sp"
+                   android:textStyle="bold" />
+               <RadioGroup
+                   android:id="@+id/radio_group"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+                   <me.omidh.liquidradiobutton.LiquidRadioButton
+                       android:id="@+id/optionA"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="monospace"
+                       android:padding="17dp"
+                       app:lrb_checkedColor="@color/colorbackground"
+                       app:lrb_explodeCount="3"
+                       app:lrb_inAnimDuration="500"
+                       app:lrb_innerCircleRadius="15dp"
+                       app:lrb_outAnimDuration="500"
+                       app:lrb_outterPadding="8dp"
+                       app:lrb_strokeRadius="15dp"
+                       app:lrb_strokeWidth="1dp"
+                       app:lrb_unCheckedColor="@android:color/black" />
+
+                   <me.omidh.liquidradiobutton.LiquidRadioButton
+                       android:id="@+id/optionB"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="monospace"
+                       android:padding="20dp"
+                       app:lrb_checkedColor="@color/colorbackground"
+                       app:lrb_explodeCount="3"
+                       app:lrb_inAnimDuration="500"
+                       app:lrb_innerCircleRadius="15dp"
+                       app:lrb_outAnimDuration="500"
+                       app:lrb_outterPadding="8dp"
+                       app:lrb_strokeRadius="15dp"
+                       app:lrb_strokeWidth="1dp"
+                       app:lrb_unCheckedColor="@android:color/black" />
+
+                   <me.omidh.liquidradiobutton.LiquidRadioButton
+                       android:id="@+id/optionC"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="monospace"
+                       android:padding="20dp"
+                       app:lrb_checkedColor="@color/colorbackground"
+                       app:lrb_explodeCount="3"
+                       app:lrb_inAnimDuration="500"
+                       app:lrb_innerCircleRadius="15dp"
+                       app:lrb_outAnimDuration="500"
+                       app:lrb_outterPadding="8dp"
+                       app:lrb_strokeRadius="15dp"
+                       app:lrb_strokeWidth="1dp"
+                       app:lrb_unCheckedColor="@android:color/black" />
+
+                   <me.omidh.liquidradiobutton.LiquidRadioButton
+                       android:id="@+id/optionD"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="monospace"
+                       android:padding="20dp"
+                       app:lrb_checkedColor="@color/colorbackground"
+                       app:lrb_explodeCount="3"
+                       app:lrb_inAnimDuration="500"
+                       app:lrb_innerCircleRadius="15dp"
+                       app:lrb_outAnimDuration="500"
+                       app:lrb_outterPadding="8dp"
+                       app:lrb_strokeRadius="15dp"
+                       app:lrb_strokeWidth="1dp"
+                       app:lrb_unCheckedColor="@android:color/black" />
+               </RadioGroup>
+           </LinearLayout>
+       </android.support.v7.widget.CardView>
+   </RelativeLayout>
+
+
+</ScrollView>

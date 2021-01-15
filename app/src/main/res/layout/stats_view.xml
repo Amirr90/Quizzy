@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:layout_margin="5dp"
+    app:cardCornerRadius="4dp"
+    android:elevation="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/stats_lay4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:paddingLeft="10dp"
+            android:visibility="gone"
+            android:paddingTop="5dp"
+            android:id="@+id/imageView2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/profile" />
+
+        <TextView
+            android:layout_marginRight="50dp"
+            android:id="@+id/stats_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageView2"
+            android:fontFamily="monospace"
+            android:paddingLeft="10dp"
+            android:text="Set Title Here Set Title Here Set Title Here Set Title Here"
+            android:textColor="@color/colorbackground"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/stats_status"
+            android:layout_centerVertical="true"
+            android:paddingRight="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:paddingLeft="5dp"
+            android:text="Pass"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorbackground"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/just_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stats_title"
+            android:layout_marginTop="20dp"
+            android:fontFamily="monospace"
+            android:paddingLeft="10dp"
+            android:text="just now"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/colorPrimary" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

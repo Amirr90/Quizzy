@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.wang.avi.AVLoadingIndicatorView
+        android:padding="10dp"
+        android:elevation="10dp"
+        android:id="@+id/avi"
+        android:layout_centerInParent="true"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:indicatorColor="@color/colorbackground"
+        app:indicatorName="LineScaleIndicator" />
+</RelativeLayout>

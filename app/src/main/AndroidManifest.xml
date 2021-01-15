@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.e.quizzy">
+
+    <application
+        android:name=".NotificationClass"
+        android:allowBackup="true"
+        android:icon="@drawable/logo_q"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo_q"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ShowPlayedQuizActivity"></activity>
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StatsActivity"
+            android:label="@string/title_activity_stats"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ShowAllActivity"
+            android:label="@string/title_activity_show_all"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SliderActivity"
+            android:label="@string/title_activity_slider"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ResultActivity"
+            android:label="@string/title_activity_result"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".QuizActivity"
+            android:label="@string/title_activity_quiz"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ShowProfile"
+            android:label="@string/title_activity_show_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ShowCategory"
+            android:label="@string/title_activity_show_category"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainActivity" >
+            <intent-filter>
+                <action android:name="com.e.quizzy.notification_action"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
